@@ -1,3 +1,9 @@
 [submodule "git-hooks"]
 	path = git-hooks
 	url = https://github.com/FilippoVissani/git-hooks
+[submodule "ascent-essentials-frontend"]
+	path = ascent-essentials-frontend
+	url = https://github.com/AscentEssentials/ascent-essentials-frontend
+[submodule "ascent-essentials-backend"]
+	path = ascent-essentials-backend
+	url = https://github.com/AscentEssentials/ascent-essentials-backend
