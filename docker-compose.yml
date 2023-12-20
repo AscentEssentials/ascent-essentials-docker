@@ -7,8 +7,6 @@ services:
       dockerfile: Dockerfile.backend
     ports:
       - "3000:3000"
-    networks:
-      - app-network
 
   frontend:
     build:
@@ -16,11 +14,5 @@ services:
       dockerfile: Dockerfile.frontend
     ports:
       - "4200:4200"
-    networks:
-      - app-network
     depends_on:
       - backend
-
-networks:
-  app-network:
-    driver: bridge
