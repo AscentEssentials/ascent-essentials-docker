@@ -1,6 +1,10 @@
 FROM node:20
 COPY ./ascent-essentials-backend /app
 WORKDIR /app
+ENV MONGO_USER admin
+ENV MONGO_PASSWORD admin
+ENV MONGO_HOST localhost
+ENV MONGO_PORT 27017
 RUN npm install
 EXPOSE 3000
 CMD ["npm", "run", "dev"]
