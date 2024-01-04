@@ -9,6 +9,10 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: admin # mongo admin password
     ports:
       - 27017:27017
+    volumes:
+      - type: bind
+        source: ./data
+        target: /data/db
 
   mongo-dashboard:
     depends_on:
@@ -23,10 +27,6 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: test
       ME_CONFIG_BASICAUTH_PASSWORD: test
       ME_CONFIG_MONGODB_URL: mongodb://admin:admin@mongo:27017/
-    volumes:
-      - type: bind
-        source: ./data
-        target: /data/db
 
   backend:
     depends_on:
