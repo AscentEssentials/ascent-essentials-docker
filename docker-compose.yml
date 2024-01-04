@@ -39,6 +39,10 @@ services:
       - "3000:3000"
     environment:
       MONGODB_URL: mongodb://admin:admin@mongo:27017/
+    volumes:
+      - type: bind
+        source: ./uploads
+        target: /app/uploads
 
   frontend:
     build:
